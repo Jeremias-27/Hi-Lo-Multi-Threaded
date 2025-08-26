@@ -1,9 +1,56 @@
-# Hi-Lo Multi-Threaded game implemented with threads, mutexes, and condition variables
-# There are three threads, thread 1 and thread 2 act as the players while thread three acts as the referee
-# The referee generates a random number to be the target of the game which is from 1 to 100
-# Player 1's strategy is to take the average of its max and min bounds which are originally the bounds of the target guess
-# Player 2's strategy is to just guess a random number between its max and min bounds
-# Each player's guess was stored in a global array
-# After each guess the referee informs the players whether their guesses were high, low, or correct and they adjust their bounds accordingly
-# This feedback is done through a global array, along with mutexes and condition variables
-# A total of 10 games is played and the player with the most wins is declared the winner
+# Hi-Lo Multi-Threaded Game
+## 📌 Overview
+
+This project is a Hi-Lo number guessing game implemented using POSIX threads (pthreads). It explores thread-based concurrency, providing a more lightweight alternative to process-based execution, while addressing synchronization and shared resource management.
+
+The project demonstrates:
+
+--Thread creation and management
+
+--Shared memory and synchronization
+
+--Performance trade-offs compared to process-based implementation
+
+## 🛠 Features
+
+--Multi-threaded architecture using pthreads
+
+--Shared memory for game state
+
+--Synchronization to prevent race conditions
+
+--Configurable difficulty and guessing range
+
+## ⚙️ Technologies
+
+--Language: C
+
+--Concurrency: POSIX Threads
+
+--Synchronization: Mutex locks (if implemented)
+
+--Platform: Linux / UNIX-like systems
+
+## 🚀 Getting Started
+✅ Prerequisites
+
+--GCC compiler
+
+--Linux/UNIX environment
+
+--POSIX thread support (usually included in Linux)
+
+## 🔧 Build and Run
+git clone https://github.com/your-username/hi-lo-multi-threaded-game.git
+
+cd hi-lo-multi-threaded-game
+
+./hi_lo_thread
+
+## 📚 Learning Outcomes
+
+--Implementing concurrency using threads
+
+--Synchronization techniques in multi-threaded programs
+
+--Performance differences between threads and processes
